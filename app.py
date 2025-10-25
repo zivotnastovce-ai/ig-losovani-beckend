@@ -34,4 +34,14 @@ def draw(req: DrawRequest):
         "participants_count": len(req.participants),
         "winners_count": req.winners_count,
         "winners": winners
-    }
+
+# --- zbytek tvého kódu nech tak, jak je ---
+
+import os
+
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 10000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
+  
+  }
